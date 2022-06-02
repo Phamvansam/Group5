@@ -1,4 +1,4 @@
-package com.vti.dto;
+package com.vti.dto.position;
 
 public class PositionDTO {
 	

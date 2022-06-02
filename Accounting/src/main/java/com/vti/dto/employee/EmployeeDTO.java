@@ -1,4 +1,4 @@
-package com.vti.dto;
+package com.vti.dto.employee;
 
 public class EmployeeDTO {
 	
@@ -11,6 +11,8 @@ public class EmployeeDTO {
 	private String departmentName;
 	
 	private String positionName;
+	
+	private String contract;
 
 	public String getCode() {
 		return code;
@@ -51,6 +53,16 @@ public class EmployeeDTO {
 	public void setPositionName(String positionName) {
 		this.positionName = positionName;
 	}
+
+	public String getContract() {
+		return contract;
+	}
+
+	public void setContract(String contract) {
+		this.contract = contract;
+	}
+
+	
 	
 	
 	

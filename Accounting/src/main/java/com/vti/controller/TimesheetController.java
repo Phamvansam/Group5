@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vti.dto.TimesheetDTO;
-import com.vti.dto.TimesheetDTO;
+import com.vti.dto.timesheet.TimesheetDTO;
 import com.vti.entity.Timesheet;
+import com.vti.service.timesheet.ITimesheetService;
 import com.vti.entity.Timesheet;
-import com.vti.service.ITimesheetService;
 
 @RestController
 @RequestMapping(value = "api/v1/timesheets")

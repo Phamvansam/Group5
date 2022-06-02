@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vti.dto.PositionDTO;
+import com.vti.dto.position.PositionDTO;
 import com.vti.entity.Position;
-
-import com.vti.service.IPositionService;
+import com.vti.service.position.IPositionService;
 
 @RestController
 @RequestMapping(value = "api/v1/positions")

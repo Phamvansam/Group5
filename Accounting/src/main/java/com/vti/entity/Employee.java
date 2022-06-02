@@ -89,6 +89,9 @@ public class Employee implements Serializable{
 	@CreationTimestamp
 	private Date createDate;
 	
+	@OneToMany(mappedBy = "employee")
+	private List<Timesheet> timesheets;
+	
 	
 	public enum Role {
 		ADMIN,EMPLOYEE,MANAGER,ACCOUNTANT
@@ -226,8 +229,16 @@ public class Employee implements Serializable{
 		this.position = position;
 	}
 
-	
+	public List<Timesheet> getTimesheets() {
+		return timesheets;
+	}
 
+	public void setTimesheets(List<Timesheet> timesheets) {
+		this.timesheets = timesheets;
+	}
+
+	
+	
 
 	
 }

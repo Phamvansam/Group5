@@ -1,4 +1,4 @@
-package com.vti.service;
+package com.vti.service.accounting;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ public interface IAccountingService {
 
 	public List<Accounting> getAllAccountings();
 
-//	public Accounting getAccountingByID(int id);
-//
+	public Accounting getAccountingByID(int id);
+
 //	public void createAccounting(Accounting accounting);
 //
 //	public void updateAccounting(Accounting accounting);

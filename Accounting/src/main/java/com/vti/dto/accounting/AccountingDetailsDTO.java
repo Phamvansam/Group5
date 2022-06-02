@@ -1,75 +1,65 @@
-package com.vti.entity;
+package com.vti.dto.accounting;
 
-import java.io.Serializable;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.NamedEntityGraph;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Entity
-@Table(name = "Accounting")
-public class Accounting implements Serializable {
-
-private static final long serialVersionUID = 1L;
+public class AccountingDetailsDTO {
 	
-	@Column(name = "accounting_id")
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private String employeeFullName;
 	
-	@OneToOne
-	@JoinColumn(name = "employee_id",referencedColumnName = "employee_id")
-	private Employee employee;
+	private String employeeUserName;
 	
-	@Column(name = "basic_salary", nullable = false)
+	private String employeeDepartmentName;
+	
+	private String employeePositionName;
+	
 	private int basicSalary;
 	
-	@Column(name = "money_for_meals", nullable = false)
 	private int moneyForMeals;
 	
-	@Column(name = "responsibility")
 	private int responsibility;
 	
-	@Column(name = "seniority")
 	private int seniority;
 	
-	@Column(name = "bonus")
 	private int bonus;
-
-	@Column(name = "total_working_hours")
+	
 	private int totalWorkingHours;
 	
-	@Column(name = "total_overtime_hours")
 	private int totalOvertimeHours;
 	
-	@Column(name = "personal_income_tax")
 	private int personalIncomeTax;
-
-	@Column(name = "advance")
+	
 	private int advance;
 	
-	@Column(name = "total_salary")
 	private int totalSalary;
 
-	
-	public Accounting() {
+	public String getEmployeeFullName() {
+		return employeeFullName;
 	}
 
-	public int getId() {
-		return id;
+	public void setEmployeeFullName(String employeeFullName) {
+		this.employeeFullName = employeeFullName;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public String getEmployeeUserName() {
+		return employeeUserName;
+	}
+
+	public void setEmployeeUserName(String employeeUserName) {
+		this.employeeUserName = employeeUserName;
+	}
+
+	public String getEmployeeDepartmentName() {
+		return employeeDepartmentName;
+	}
+
+	public void setEmployeeDepartmentName(String employeeDepartmentName) {
+		this.employeeDepartmentName = employeeDepartmentName;
+	}
+
+	public String getEmployeePositionName() {
+		return employeePositionName;
+	}
+
+	public void setEmployeePositionName(String employeePositionName) {
+		this.employeePositionName = employeePositionName;
 	}
 
 	public int getBasicSalary() {
@@ -150,14 +140,6 @@ private static final long serialVersionUID = 1L;
 
 	public void setTotalSalary(int totalSalary) {
 		this.totalSalary = totalSalary;
-	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
 	}
 	
 	

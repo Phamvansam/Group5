@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vti.dto.AccountingDTO;
+import com.vti.dto.accounting.AccountingDTO;
+import com.vti.dto.accounting.AccountingDetailsDTO;
+import com.vti.dto.employee.EmployeeDetailsDTO;
 import com.vti.entity.Accounting;
-
-import com.vti.service.IAccountingService;
+import com.vti.entity.Employee;
+import com.vti.service.accounting.IAccountingService;
 
 @RestController
 @RequestMapping(value = "api/v1/accountings")
@@ -43,11 +45,15 @@ public class AccountingController {
 		return dtos;
 	}
 
-//	@GetMapping(value = "/{id}")
-//	public Accounting getAccountingByID(@PathVariable(name = "id") int id) {
-//		return service.getAccountingByID(id);
-//	}
-//
+	@GetMapping(value = "/{id}")
+	public AccountingDetailsDTO getAccountingByID(@PathVariable(name = "id") int id) {
+		Accounting entity = service.getAccountingByID(id);
+		
+		// convert entity to dto
+		AccountingDetailsDTO dto = modelMapper.map(entity, AccountingDetailsDTO.class);
+		return dto;
+	}
+
 //	@PostMapping()
 //	public void createAccounting(@RequestBody AccountingForm form) {
 //		service.createAccounting(form.toEntity());

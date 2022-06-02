@@ -1,4 +1,4 @@
-package com.vti.service;
+package com.vti.service.accounting;
 
 import java.util.List;
 
@@ -18,10 +18,10 @@ public class AccountingService implements IAccountingService {
 		return repository.findAll();
 	}
 
-//	public Accounting getAccountingByID(int id) {
-//		return repository.findById(id).get();
-//	}
-//
+	public Accounting getAccountingByID(int id) {
+		return repository.findById(id).get();
+	}
+
 //	public void createAccounting(Accounting accounting) {
 //		repository.save(accounting);
 //	}

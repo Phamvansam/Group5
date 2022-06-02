@@ -36,6 +36,10 @@ public class Timesheet implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@ManyToOne
+	@JoinColumn(name = "employee_id",nullable = false)
+	private Employee employee;
+	
 	@Column(name = "time_in")
 	@Temporal(TemporalType.TIMESTAMP)
 	@CreationTimestamp
@@ -93,6 +97,14 @@ public class Timesheet implements Serializable{
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 
 	

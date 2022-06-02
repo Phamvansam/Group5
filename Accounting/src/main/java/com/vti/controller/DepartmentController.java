@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vti.dto.DepartmentDTO;
+import com.vti.dto.department.DepartmentDTO;
 import com.vti.entity.Department;
-
-import com.vti.service.IDepartmentService;
+import com.vti.service.department.IDepartmentService;
 
 @RestController
 @RequestMapping(value = "api/v1/departments")
